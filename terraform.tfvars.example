@@ -1,0 +1,27 @@
+# ------------------------------------------------------------------------------
+# Terraform configuration — Cloudflare Prometheus Exporter
+# Copy this file to terraform/terraform.tfvars (not versioned) and fill in values.
+# ------------------------------------------------------------------------------
+
+# Cloudflare account ID (available in the dashboard, right sidebar)
+cloudflare_account_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Terraform / Wrangler token — must have:
+#   Workers Scripts:Edit, Workers KV Storage:Edit, Account:Read
+cloudflare_api_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Worker name (optional, default: cloudflare-prometheus-exporter)
+# worker_name = "cloudflare-prometheus-exporter"
+
+# Token used BY the worker to scrape Cloudflare metrics.
+# Permissions: Zone>Analytics Read, Account>Account Analytics Read,
+#   Account>Workers Scripts Read, Zone>SSL Read, Zone>Firewall Read,
+#   Zone>Load Balancers Read, Account>Logs Read, Account>Magic Transit Read
+CLOUDFLARE_API_TOKEN_secret = ""
+
+# Optional HTTP Basic Auth to protect /metrics
+# BASIC_AUTH_USER     = "admin"
+# BASIC_AUTH_PASSWORD = "changeme"
+
+# Auto-deploy on terraform apply (default: true)
+# deploy_on_apply = true
