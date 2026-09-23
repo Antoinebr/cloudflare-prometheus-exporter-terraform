@@ -8,7 +8,7 @@ The core Cloudflare Prometheus Exporter code (Worker, Durable Objects, GraphQL q
 
 **https://github.com/cloudflare/cloudflare-prometheus-exporter**
 
-This repository adds Terraform-based deployment automation, Wrangler configuration generation, and local development tooling around that upstream code. All exporter logic remains the work of Cloudflare.
+This repository adds Terraform-based deployment automation, Wrangler configuration generation, and local development tooling around that upstream code. The wrapper, build scripts, and deployment configuration in this repository are maintained at https://github.com/Antoinebr/cloudflare-prometheus-exporter-terraform and are not an official Cloudflare project.
 
 ## What it does
 
